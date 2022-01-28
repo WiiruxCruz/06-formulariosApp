@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "formulariosApp"
+    }
+  },
+  "defaultProject": "formulariosApp",
+  "cli": {
+    "analytics": "ce3aa92d-341c-4536-b88c-e09cf39ce98a"
+  }
 }
