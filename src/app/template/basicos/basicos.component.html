@@ -31,8 +31,11 @@
             ngModel
             name="Producto"
             required
+            minlength="3"
           >
           <span
+            *ngIf="miFormulario.controls.producto?.invalid &&
+            miFormulario.controls.producto?.touched"
             class="form-text text-danger"
           >
             Debe de ser de 3 letras
@@ -111,6 +114,12 @@
   <div class="col">
     <span>Valid</span>
     <pre>{{ miFormulario.valid }}</pre>
+
+    <span>Pristine</span>
+    <pre>{{ miFormulario.pristine }}</pre>
+
+    <span>Touched</span>
+    <pre>{{ miFormulario.touched }}</pre>
 
     <span>Value</span>
     <pre>{{ miFormulario.value | json }}</pre>
