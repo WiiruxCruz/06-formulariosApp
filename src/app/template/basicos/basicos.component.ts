@@ -35,6 +35,12 @@ export class BasicosComponent implements OnInit {
     //&& this.miFormulario?.controls['producto']?.touched;
   }
 
+  precioValido(): boolean {
+    console.log('precio -->' + this.miFormulario?.controls.precio?.value);
+    return this.miFormulario?.controls.precio?.touched
+    && this.miFormulario?.controls.precio?.value < 0;
+  }
+
   //guardar( miFormulario: NgForm ) {
     //console.log( miFormulario );
   guardar() {
