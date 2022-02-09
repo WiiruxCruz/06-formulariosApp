@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-basicos',
@@ -17,9 +17,9 @@ export class BasicosComponent {
   */
 
   miFormulario: FormGroup = this.fb.group({
-    nombre: ['RTX 4800ti'],
-    precio: [0],
-    existencias: [0]
+    nombre: [ 'RTX 4800ti', [Validators.required, Validators.minLength(3)] ],
+    precio: [ 0, [Validators.required, Validators.min(0)] ],
+    existencias: [ 0 , [Validators.required, Validators.min(0)]]
   });
 
   constructor( private fb: FormBuilder ) { }
