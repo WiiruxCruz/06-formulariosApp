@@ -107,6 +107,7 @@
 					<button
 						class="btn btn-primary float-end"
 						type="submit"
+						[disabled]="miFormulario.pending"
 					>
 						Crear
 					</button>
@@ -119,6 +120,8 @@
 
 
 <h2>Form valid {{ miFormulario.valid }}</h2>
+<h2>Form status {{ miFormulario.status }}</h2>
+<h2>Form pending {{ miFormulario.pending }}</h2>
 <h2>Forms errors</h2>
 <pre>{{ miFormulario.errors | json }}</pre>
 
